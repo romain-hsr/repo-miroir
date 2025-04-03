@@ -12,6 +12,9 @@ int execute(char *cmd, char **tab, char **env)
     pid_t pid = fork();
     int status;
 
+
+
+    
     if (pid == -1) {
         perror("fork");
         return 84;
