@@ -5,14 +5,7 @@
 ## Will Makefile
 ##
 
-SCR	=	$(wildcard lib/*.c)	\
-		$(wildcard info_env/*.c)	\
-		$(wildcard command_recode/*.c)	\
-		$(wildcard command_recode/cd/*.c)	\
-		$(wildcard redirection/*.c)	\
-		exit.c	\
-		pipe.c	\
-		main.c	\
+SCR	=	main.c	\
 
 NAME	=	mysh
 
