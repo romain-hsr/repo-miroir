@@ -23,7 +23,7 @@ int execute(char *cmd, char **tab, char **env)
         exit(EXIT_FAILURE);
     }
     if (waitpid(pid, &status, 0) == -1)
-        perror("waitpid");
+        perror("waitpid");   
     return 0;
 }
 
