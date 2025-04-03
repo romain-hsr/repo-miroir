@@ -13,9 +13,8 @@ int execute(char *cmd, char **tab, char **env)
     int status;
 
 
-
     
-    if (pid == -1) {
+    if (pid == -1) {   
         perror("fork");
         return 84;
     }
