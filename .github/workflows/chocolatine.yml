@@ -9,7 +9,7 @@ on:
 
 env:
   MIRROR_URL: "git@github.com:EpitechPGEPromo2029/B-DOP-200-MLH-2-1-chocolatine-romain.hanser.git"
-  EXECUTABLES: "path/executable1,path/executable2"
+  EXECUTABLES: "choco"
 
 jobs:
   check_coding_style:
@@ -51,8 +51,8 @@ jobs:
 
       - name: Verify Executables
         run: |
-          IFS=',' read -ra EXECS <<< "$EXECUTABLES"
-          for exe in "${EXECS[@]}"; do
+          IFS=','
+          for exe in $EXECS; do
             if [[ ! -x "$exe" ]]; then
               echo "::error file=$exe::Missing or non-executable file"
               exit 1
