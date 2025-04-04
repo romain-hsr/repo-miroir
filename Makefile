@@ -7,7 +7,7 @@
 
 SCR	=	main.c	\
 
-NAME	=	mysh
+NAME	=	choco
 
 all: $(NAME)
 
