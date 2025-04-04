@@ -19,4 +19,6 @@ clean:
 
 fclean: clean
 
+tests_run: clean
+
 re:	fclean all
