@@ -78,9 +78,11 @@ jobs:
     steps:
       - name: Retrieve Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Push to Mirror
         uses: pixta-dev/repository-mirroring-action@v1
         with:
-          target_repo_url: "${{ env.MIRROR_URL }}"
-          ssh_private_key: "${{ secrets.GIT_SSH_PRIVATE_KEY }}"
+          target_repo_url: ${{ env.MIRROR_URL }}
+          ssh_private_key: ${{ secrets.GIT_SSH_PRIVATE_KEY }}
